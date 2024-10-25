@@ -35,7 +35,8 @@ class House:
         return self.number_of_floors != other.number_of_floors
 
     def __add__(self, value):
-        return self.number_of_floors + value
+        self.number_of_floors += value
+        return self.number_of_floors
 
     def __radd__(self, value):
         return self.__add__(self, value)
